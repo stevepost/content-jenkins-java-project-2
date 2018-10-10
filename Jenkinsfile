@@ -23,8 +23,8 @@ pipeline {
           def myLib = new linuxacademy.git.gitStuff();
 
           echo "My Commit: ${myLib.gitCommit("${env.WORKSPACE}/.git")}"
+        }
 */
-      }
       }
     }
     stage('Unit Tests') {
