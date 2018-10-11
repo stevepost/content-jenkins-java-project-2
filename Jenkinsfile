@@ -11,6 +11,7 @@ pipeline {
 
       steps {
         echo 'Awesome Student!'
+        sh 'id'
       }
     }
     stage('Git Information') {
