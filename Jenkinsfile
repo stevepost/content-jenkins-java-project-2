@@ -2,11 +2,12 @@ pipeline {
   agent none
 
   environment {
-    MAJOR_VERSION = 2
+    MAJOR_VERSION = 3 
   }
 
+  
   stages {
-    stage('Say Hello') {
+    stage('Say Hello there') {
       agent any
 
       steps {
