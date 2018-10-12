@@ -2,7 +2,7 @@ pipeline {
   agent none
 
   environment {
-    MAJOR_VERSION = 3
+    MAJOR_VERSION = 3 
   }
 
   stages {
