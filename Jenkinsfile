@@ -5,6 +5,7 @@ pipeline {
     MAJOR_VERSION = 3 
   }
 
+  
   stages {
     stage('Say Hello there') {
       agent any
