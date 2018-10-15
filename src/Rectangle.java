@@ -14,4 +14,9 @@ public class Rectangle {
   public int getPerimeter() {
     return 2 * (length + width);
   }
+
+  public float getRatio() {
+    return (length / width);
+  }
+}
 }
