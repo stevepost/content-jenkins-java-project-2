@@ -2,15 +2,17 @@ pipeline {
   agent none
 
   environment {
-    MAJOR_VERSION = 1
+    MAJOR_VERSION = 3 
   }
 
+  
   stages {
-    stage('Say Hello') {
+    stage('Say Hello there') {
       agent any
 
       steps {
-        echo 'Awesome Student!'
+        echo 'Nice Student!'
+        sh 'id'
       }
     }
     stage('Git Information') {
@@ -99,9 +101,10 @@ pipeline {
         sh 'git stash'
         echo "Checking Out Development Branch"
         sh 'git checkout development'
-        echo 'Checking Out Master Branch'
         sh 'git pull origin'
+        echo 'Checking Out Master Branch'
         sh 'git checkout master'
+        sh 'git pull origin'
         echo 'Merging Development into Master Branch'
         sh 'git merge development'
         echo 'Pushing to Origin Master'
