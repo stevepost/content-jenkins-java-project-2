@@ -18,5 +18,6 @@ public class Rectangle {
   public float getRatio() {
     return (length / width);
   }
+
 }
 }
