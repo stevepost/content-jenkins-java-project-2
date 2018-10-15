@@ -23,4 +23,10 @@ public class RectangleTest {
   public void testWidth() {
     assertEquals(myRectangle.width, 6);
   }
+  
+  @Test
+  public void testgetRatio() {
+    assertEquals(myRectangle.getRatio(), 0.13888889);
+  }
+
 }
