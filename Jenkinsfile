@@ -4,7 +4,6 @@ pipeline {
   environment {
     MAJOR_VERSION = 3
     JENKINS_SERVER = "http://jenkinsmaster"
-    CREDS = credentials('contents-jenkins-java-project')
   }
 
   stages {
@@ -114,7 +113,7 @@ pipeline {
         sh 'git merge development'
         echo 'Pushing to Origin Master'
         sh 'git remote -v'
-        sh 'git push https://${env.CREDS}@github.com/stevepost/content-jenkins-java-project.git master'
+        sh 'git push https://stevepost:Hurricane1\&@github.com/stevepost/content-jenkins-java-project.git master'
         echo 'Tagging the Release'
         sh "git tag rectangle-${env.MAJOR_VERSION}.${env.BUILD_NUMBER}"
         sh "git push origin rectangle-${env.MAJOR_VERSION}.${env.BUILD_NUMBER}"
