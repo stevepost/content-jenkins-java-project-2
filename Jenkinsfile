@@ -6,7 +6,6 @@ pipeline {
     JENKINS_SERVER = "http://jenkinsmaster"
   }
 
-  
   stages {
     stage('Say Hello there') {
       agent any
