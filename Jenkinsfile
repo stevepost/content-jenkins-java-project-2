@@ -75,6 +75,7 @@ pipeline {
         docker {
           image 'openjdk:8u121-jre'
           label 'docker'
+          args '--network=host'
         }
       }
       steps {
