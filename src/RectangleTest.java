@@ -26,7 +26,7 @@ public class RectangleTest {
   
   @Test
   public void testGetRatio() {
-    assertEquals(myRectangle.getRatio(), 0.13888889);
+    assertEquals(myRectangle.getRatio(), 0.13888889, 0.1);
   }
 
 }
