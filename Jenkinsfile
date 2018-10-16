@@ -2,10 +2,10 @@ pipeline {
   agent none
 
   environment {
-    MAJOR_VERSION = 3 
+    MAJOR_VERSION = 3
+    JENKINS_SERVER = "http://jenkinsmaster"
   }
 
-  
   
   stages {
     stage('Say Hello there') {
@@ -66,7 +66,7 @@ pipeline {
         label 'CentOS'
       }
       steps {
-        sh "wget http://stevepos1.mylabserver.com/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
+        sh "wget ${JENKINS_SERVER}/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
         sh "java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar 3 4"
       }
     }
@@ -75,7 +75,7 @@ pipeline {
         docker 'openjdk:8u121-jre'
       }
       steps {
-        sh "wget http://stevepos1.mylabserver.com/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
+        sh "wget ${JENKINS_SERVER}/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
         sh "java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar 3 4"
       }
     }
