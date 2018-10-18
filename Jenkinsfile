@@ -2,7 +2,6 @@ pipeline {
   agent none
 
   
-  
   environment {
     MAJOR_VERSION = 3
     JENKINS_SERVER = "http://jenkinsmaster"
